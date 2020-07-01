@@ -2,10 +2,8 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req,res) => {
-    console.log(req);
-    console.log("Sending status code 200");
-    
-    res.sendStatus(200);
+    console.log(req);    
+    res.json({x: 10,y: 20});
 })
 
 app.listen(3000, (err) => {
